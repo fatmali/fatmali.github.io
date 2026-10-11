@@ -1,0 +1,45 @@
+name: Refresh project catalog
+
+on:
+  schedule:
+    - cron: "17 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: refresh-project-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'fatmali/fatmali.github.io'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Discover public Pages projects
+        run: node scripts/sync-projects.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - run: node --test
+      - name: Save the refreshed catalog
+        run: |
+          if ! git diff --quiet -- data/projects.json index.html; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/projects.json index.html
+            git commit -m "Refresh public project catalog"
+            git push origin HEAD:master
+          fi
+      # A GITHUB_TOKEN commit does not trigger the legacy Pages build automatically.
+      - name: Request a GitHub Pages rebuild
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}

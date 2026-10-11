@@ -1,0 +1,160 @@
+[
+  {
+    "repo": "frank",
+    "title": "Frank",
+    "description": "A rubber duck that reviews your AI agent's plans. He's frank. He's a duck. He will not tell you every idea is brilliant.",
+    "question": "What if \"looks good to me\" wasn't the entire review?",
+    "category": "developer",
+    "type": "AI sidekick",
+    "art": "frank",
+    "color": "#ffe477",
+    "url": "https://lab.fatmaali.dev/frank/"
+  },
+  {
+    "repo": "jamboscript-docs",
+    "title": "JamboScript",
+    "description": "Learn to code in Swahili, one story-driven adventure at a time. Because your first programming language can feel like home.",
+    "question": "Why should learning to code start with learning English?",
+    "category": "learning",
+    "type": "Language + learning",
+    "art": "jambo",
+    "color": "#ffb6cf",
+    "url": "https://jamboscript.org/"
+  },
+  {
+    "repo": "still",
+    "title": "Still",
+    "description": "A sensory space to find your footing through touch, sound, and motion. Less \"here are 10 tips\". More one thing to hold onto.",
+    "question": "Can an interface ask less of an overwhelmed mind?",
+    "category": "everyday",
+    "type": "Sensory experience",
+    "art": "still",
+    "color": "#d5e4db",
+    "url": "https://lab.fatmaali.dev/still/"
+  },
+  {
+    "repo": "herd",
+    "title": "herd",
+    "description": "A browser extension that groups tabs by what you're actually doing. For when your browser has become a cry for help.",
+    "question": "What if your tabs remembered why you opened them?",
+    "category": "developer",
+    "type": "Browser extension",
+    "art": "herd",
+    "color": "#e0ddfa",
+    "url": null,
+    "siteNote": "Site temporarily unavailable",
+    "siteIssue": "Both the configured Pages URL and the standard github.io URL currently return HTTP 404."
+  },
+  {
+    "repo": "what-to-eat",
+    "title": "What To Eat",
+    "description": "Keep track of your fridge, leftovers, and shopping list. A small intervention for the spinach you bought with such good intentions.",
+    "question": "Could dinner start with what we already have?",
+    "category": "everyday",
+    "type": "Kitchen companion",
+    "art": "food",
+    "color": "#e2ecb5",
+    "url": "https://lab.fatmaali.dev/what-to-eat/"
+  },
+  {
+    "repo": "handbook",
+    "title": "Handbook",
+    "description": "Turn course material into source-linked chapters, diagrams, practice, and a private notebook. Give the learning a little room to stick.",
+    "question": "What if course notes were a place to think, not just scroll?",
+    "category": "learning",
+    "type": "Learning companion",
+    "art": "book",
+    "color": "#bcd9f4",
+    "url": "https://lab.fatmaali.dev/handbook/"
+  },
+  {
+    "repo": "wormhole",
+    "title": "Wormhole",
+    "description": "Shared memory for your AI coding agents. Switch tools without explaining your entire life story to the next one.",
+    "question": "Can the agents please compare notes?",
+    "category": "developer",
+    "type": "MCP tool",
+    "art": "wormhole",
+    "color": "#d9d3f2",
+    "url": "https://lab.fatmaali.dev/wormhole/"
+  },
+  {
+    "repo": "guide",
+    "title": "The London Journal",
+    "description": "An offline-first travel journal for London, York, and Edinburgh. Thoughtful routes, little discoveries, and permission to slow down.",
+    "question": "What if a travel app felt like a friend who knows the city?",
+    "category": "everyday",
+    "type": "Travel companion",
+    "art": "guide",
+    "color": "#ffcfb5",
+    "url": "https://lab.fatmaali.dev/guide/"
+  },
+  {
+    "repo": "receipts",
+    "title": "Receipts",
+    "description": "A personal finance experiment for budgets, transactions, and a clearer view of where the money went. Yes, it brings receipts.",
+    "question": "Could checking the budget feel a little less like homework?",
+    "category": "everyday",
+    "type": "Money experiment",
+    "art": "receipt",
+    "color": "#f4edb2",
+    "url": "https://lab.fatmaali.dev/receipts/"
+  },
+  {
+    "repo": "task-manager",
+    "title": "Task Manager, rethought",
+    "description": "A clickable redesign of Windows Task Manager, exploring safer actions and clearer information. End task, not your confidence.",
+    "question": "How do you make a powerful tool less intimidating?",
+    "category": "play",
+    "type": "HCI prototype",
+    "art": "tasks",
+    "color": "#c5dcf2",
+    "url": "https://lab.fatmaali.dev/task-manager/"
+  },
+  {
+    "repo": "lift",
+    "title": "Lift",
+    "description": "An offline-first strength training system built around consistency, progressive overload, and recovery. Not the number on the scale.",
+    "question": "What if a fitness app measured showing up, not shrinking?",
+    "category": "everyday",
+    "type": "Training companion",
+    "art": "lift",
+    "color": "#f9bec5",
+    "url": null,
+    "siteNote": "Site link under repair",
+    "siteIssue": "The configured Pages domain and /lift/ currently redirect to the main portfolio, not Lift."
+  },
+  {
+    "repo": "react-formik-wizard",
+    "title": "React Formik Wizard",
+    "description": "Build multi-step forms with React, Formik, and JSON. Some wizardry, significantly fewer repetitive form components.",
+    "question": "What if the form was data, not another pile of components?",
+    "category": "developer",
+    "type": "React library",
+    "art": "wizard",
+    "color": "#e7daf4",
+    "url": "https://lab.fatmaali.dev/react-formik-wizard/"
+  },
+  {
+    "repo": "utility-botcam",
+    "title": "Utility Bot Camera",
+    "description": "A tiny camera interface for capturing report images for a utility bot. One specific job. No need to make a whole production of it.",
+    "question": "How small can a useful tool be?",
+    "category": "play",
+    "type": "Camera utility",
+    "art": "camera",
+    "color": "#cbe5e3",
+    "url": "https://lab.fatmaali.dev/utility-botcam/"
+  },
+  {
+    "repo": "fatmaali.dev",
+    "title": "The main character",
+    "description": "My personal website and blog. For the work, the words, and the slightly more composed version of the person behind this lab.",
+    "question": "And who's responsible for all these tabs, anyway?",
+    "category": "play",
+    "type": "Personal site",
+    "art": "home",
+    "color": "#e6e6fb",
+    "url": "https://fatmaali.dev/"
+  }
+]

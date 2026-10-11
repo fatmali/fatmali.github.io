@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="frank" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M77 168c-28-11-29-45-11-57 18-12 38 2 44 14-6-20-1-57 30-65 42-11 73 23 62 56 18 8 50 9 74-6 0 56-38 91-95 91-51 0-85-13-104-33Z" fill="#fffdf6"/>
+      <path d="m197 89 32 13-33 8" fill="#ff945a"/>
+      <circle cx="175" cy="86" r="4" fill="#252525" stroke="none"/>
+      <path d="m164 73 17-2M104 153q29 24 54-3" fill="none"/>
+      <path d="M226 38h78q9 0 9 9v29q0 9-9 9h-39l-15 15V85h-24q-9 0-9-9V47q0-9 9-9Z" fill="#fafaf7"/>
+    </g>
+    <text x="234" y="67" font-family="sans-serif" font-size="16" font-weight="700" fill="#252525">but why?</text>
+    <path d="M73 206h204" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="jambo" viewBox="0 0 360 230">
+    <g transform="rotate(-5 180 125)">
+      <rect x="44" y="47" width="271" height="155" rx="9" fill="#fafaf7" stroke="#252525" stroke-width="2.5"/>
+      <path d="M44 77h271" stroke="#252525" stroke-width="2.5"/>
+      <g fill="#252525"><circle cx="59" cy="62" r="3"/><circle cx="71" cy="62" r="3"/><circle cx="83" cy="62" r="3"/></g>
+      <text x="65" y="118" font-family="monospace" font-size="21" font-weight="700" fill="#2845e8">andika("Jambo!");</text>
+      <path d="M67 139h117m-117 13h172" stroke="#cbcbd2" stroke-width="5" stroke-linecap="round"/>
+      <text x="65" y="184" font-family="sans-serif" font-size="13" fill="#252525">Hello, world. Karibu.</text>
+    </g>
+    <path d="m287 160 7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2Z" fill="#ffe477" stroke="#252525" stroke-width="2"/>
+  </symbol>
+  <symbol id="still" viewBox="0 0 360 230">
+    <g fill="none" stroke="#476555" stroke-width="1.2" opacity=".6"><ellipse cx="180" cy="134" rx="143" ry="76"/><ellipse cx="180" cy="134" rx="119" ry="61"/><ellipse cx="180" cy="134" rx="95" ry="47"/></g>
+    <path d="M116 149c-18-25 2-48 28-64s42-31 63-18 18 43 31 63c16 26-1 55-39 61-35 6-66-15-83-42Z" fill="#356c53"/>
+    <path d="M148 108q25-30 43-22" stroke="#b5d0b9" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="180" y="219" text-anchor="middle" font-family="sans-serif" font-size="11" letter-spacing="1" fill="#305241">a little room to breathe</text>
+  </symbol>
+  <symbol id="herd" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2">
+      <rect x="59" y="57" width="211" height="125" rx="8" fill="#fafaf7" transform="rotate(-9 170 120)"/>
+      <rect x="82" y="62" width="211" height="125" rx="8" fill="#bcd9f4" transform="rotate(5 180 120)"/>
+      <rect x="72" y="77" width="219" height="120" rx="8" fill="#fafaf7"/>
+      <path d="M72 104h219M145 77v27m73-27v27" fill="none"/>
+      <path d="M136 155c-14-11-8-28 7-29-2-16 22-23 30-11 12-12 33-3 30 13 18 1 21 20 10 29 2 23-24 33-37 20-15 12-39 1-40-22Z" fill="#e0ddfa"/>
+      <ellipse cx="218" cy="146" rx="18" ry="22" fill="#252525"/>
+      <path d="M155 178v13m35-13v13" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <circle cx="223" cy="140" r="3" fill="#fafaf7"/>
+  </symbol>
+  <symbol id="food" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="120" y="38" width="124" height="167" rx="12" fill="#fafaf7"/>
+      <path d="M120 97h124M137 61v20m0 34v32" fill="none"/>
+      <path d="M156 150q25-15 48 0v23q-25 22-48-1Z" fill="#ffb6cf"/>
+      <path d="m159 149 18-28 24 28" fill="#ffe477"/>
+      <path d="M169 143h22" fill="none"/>
+      <path d="m78 121 8-15 9 15 17 3-13 12 3 16-16-8-15 8 3-16-12-12Z" fill="#ffe477"/>
+      <path d="m262 79 8-13m1 24h15" fill="none"/>
+    </g>
+    <g fill="#252525"><circle cx="171" cy="163" r="2.4"/><circle cx="190" cy="163" r="2.4"/></g>
+    <path d="M176 170q5 5 10 0" stroke="#252525" stroke-width="2" fill="none"/>
+  </symbol>
+  <symbol id="book" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2.5" stroke-linejoin="round">
+      <path d="M53 66q62-12 127 16 66-28 127-16v128q-72-13-127 15-59-28-127-15Z" fill="#2845e8"/>
+      <path d="M64 53q54-10 116 18 59-28 116-18v128q-62-11-116 17-57-27-116-17Z" fill="#fafaf7"/>
+      <path d="M180 71v127" fill="none"/>
+      <path d="M83 82q37-1 75 17m-75 7q37 0 75 17m-75 7q37 0 75 17m42-49q37-17 76-17m-76 40q37-17 76-17" stroke="#9dacc3" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M221 66v84l14-11 14 4V56" fill="#ffe477"/>
+    </g>
+  </symbol>
+  <symbol id="wormhole" viewBox="0 0 360 230">
+    <g fill="none" stroke="#49308e" stroke-width="2.5">
+      <ellipse cx="180" cy="130" rx="117" ry="66" transform="rotate(-25 180 130)"/>
+      <ellipse cx="180" cy="130" rx="95" ry="56" transform="rotate(-42 180 130)"/>
+      <ellipse cx="180" cy="130" rx="75" ry="45" transform="rotate(-62 180 130)"/>
+      <ellipse cx="180" cy="130" rx="55" ry="33" transform="rotate(-80 180 130)"/>
+      <ellipse cx="180" cy="130" rx="35" ry="24" transform="rotate(-98 180 130)"/>
+    </g>
+    <circle cx="180" cy="130" r="14" fill="#49308e"/>
+    <g fill="#ffe477" stroke="#252525" stroke-width="2"><path d="m78 55 5 16 17 5-17 5-5 16-5-16-17-5 17-5Z"/><path d="m281 167 4 12 12 4-12 4-4 12-4-12-12-4 12-4Z"/></g>
+  </symbol>
+  <symbol id="guide" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2.5" stroke-linejoin="round">
+      <path d="m55 77 82-21 80 24 83-24v134l-83 21-80-24-82 22Z" fill="#fafaf7"/>
+      <path d="M137 56v131m80-107v131" fill="none"/>
+      <path d="m70 148 41-28 42 27 36-41 52 22 42-34" stroke="#2845e8" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+      <path d="M207 60c0-33 49-33 49 0 0 19-25 45-25 45s-24-26-24-45Z" fill="#ffb6cf"/>
+      <circle cx="231" cy="57" r="8" fill="#fafaf7"/>
+    </g>
+  </symbol>
+  <symbol id="receipt" viewBox="0 0 360 230">
+    <g transform="rotate(8 181 120)" stroke="#252525" stroke-width="2.5" stroke-linejoin="round">
+      <path d="m119 30 12 9 12-9 12 9 12-9 12 9 12-9 12 9 12-9 12 9 12-9v179l-12-9-12 9-12-9-12 9-12-9-12 9-12-9-12 9-12-9-12 9Z" fill="#fafaf7"/>
+      <path d="M140 65h79m-79 32h35m21 0h23m-79 20h49m14 0h16m-79 20h28m30 0h21m-79 22h79" fill="none" stroke-linecap="round"/>
+      <path d="m170 177 10 9 19-21" fill="none" stroke="#2845e8" stroke-width="4"/>
+    </g>
+    <g fill="#ffb6cf" stroke="#252525" stroke-width="2"><circle cx="92" cy="160" r="23"/><circle cx="270" cy="86" r="18"/></g>
+    <text x="92" y="167" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="700" fill="#252525">$</text>
+  </symbol>
+  <symbol id="tasks" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2.5" stroke-linejoin="round">
+      <rect x="49" y="53" width="262" height="147" rx="8" fill="#fafaf7"/>
+      <path d="M49 83h262m-217 0v117" fill="none"/>
+      <path d="M65 105h12m-12 17h12m-12 17h12" stroke="#2845e8" stroke-width="5" stroke-linecap="round"/>
+      <rect x="111" y="105" width="66" height="71" rx="3" fill="#e0ddfa"/>
+      <path d="m188 158 16-8 14 10 16-32 15 10 17-24 24 9" fill="none" stroke="#2845e8"/>
+      <path d="M65 67h34" stroke-width="3"/>
+    </g>
+    <path d="m260 169 11 34 8-15 17-2Z" fill="#ffe477" stroke="#252525" stroke-width="2.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="lift" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="3" stroke-linejoin="round" transform="rotate(-18 180 130)">
+      <rect x="59" y="115" width="242" height="24" rx="7" fill="#fafaf7"/>
+      <rect x="79" y="83" width="27" height="88" rx="5" fill="#2845e8"/>
+      <rect x="105" y="69" width="30" height="117" rx="5" fill="#2845e8"/>
+      <rect x="225" y="69" width="30" height="117" rx="5" fill="#2845e8"/>
+      <rect x="255" y="83" width="27" height="88" rx="5" fill="#2845e8"/>
+    </g>
+    <path d="m157 54 8-17 7 17m4 143 9 16 7-18" fill="none" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="wizard" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2.5" stroke-linejoin="round">
+      <path d="m124 177 43-128 64 130" fill="#2845e8"/>
+      <ellipse cx="180" cy="179" rx="86" ry="23" fill="#2845e8"/>
+      <path d="m175 97 5 11 12 2-9 8 2 13-11-6-11 5 3-12-9-9 12-1Z" fill="#ffe477"/>
+      <path d="m224 63 45 94" stroke-width="10"/>
+      <path d="m223 62 8 17" stroke="#fafaf7" stroke-width="6"/>
+      <path d="m267 42 4 13 13 4-13 4-4 13-4-13-13-4 13-4Z" fill="#ffe477" stroke-width="1.7"/>
+    </g>
+  </symbol>
+  <symbol id="camera" viewBox="0 0 360 230">
+    <g stroke="#252525" stroke-width="2.5" stroke-linejoin="round">
+      <path d="M83 82h47l14-25h72l14 25h47q16 0 16 16v88q0 16-16 16H83q-16 0-16-16V98q0-16 16-16Z" fill="#fafaf7"/>
+      <circle cx="180" cy="139" r="47" fill="#2845e8"/>
+      <circle cx="180" cy="139" r="30" fill="#bcd9f4"/>
+      <path d="M163 129q7-13 19-10" stroke="#fafaf7" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <rect x="253" y="99" width="20" height="13" rx="2" fill="#ffe477"/>
+    </g>
+  </symbol>
+  <symbol id="home" viewBox="0 0 360 230">
+    <g transform="rotate(-4 180 128)" stroke="#252525" stroke-width="2.5">
+      <rect x="52" y="54" width="256" height="144" rx="8" fill="#fafaf7"/>
+      <path d="M52 84h256" fill="none"/>
+      <circle cx="68" cy="69" r="3" fill="#ffb6cf"/><circle cx="80" cy="69" r="3" fill="#ffe477"/>
+      <path d="M220 191v-23q0-30-30-30h-20q-30 0-30 30v23" fill="#2845e8"/>
+      <circle cx="180" cy="127" r="27" fill="#ffb6cf"/>
+    </g>
+    <path d="m268 122 6 17 18 5-18 6-6 17-5-17-18-6 18-5Z" fill="#ffe477" stroke="#252525" stroke-width="2"/>
+    <path d="m171 132 5 4 9-7" fill="none" stroke="#252525" stroke-width="2.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="spark" viewBox="0 0 360 230">
+    <path d="M166 45h28v50l37-36 20 20-37 35h51v28h-51l37 35-20 20-37-36v49h-28v-49l-37 36-20-20 37-35H95v-28h51l-37-35 20-20 37 36Z" fill="#2845e8" stroke="#252525" stroke-width="2"/>
+  </symbol>
+</svg>
