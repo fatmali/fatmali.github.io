@@ -1,18 +1,339 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171923">
+  <title>Fatma's Lab — Small ideas. Big side-quest energy.</title>
+  <meta name="description" content="A playground for Fatma Ali's weekend projects, curious experiments, and thoughtfully overthought solutions to everyday problems. Come poke around.">
+  <link rel="canonical" href="https://lab.fatmaali.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fatma's Lab — Small ideas. Big side-quest energy.">
+  <meta property="og:description" content="Serious product instincts. Unserious weekend energy. Explore the things I couldn't stop thinking about, so I built them.">
+  <meta property="og:url" content="https://lab.fatmaali.dev/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/lab.css">
+  <script src="/assets/lab.js" defer></script>
+</head>
+<body>
+  <!--
+    THESIS: A weekend science fair for real, usable experiments, not a resume with repo links.
+    OWN-WORLD: Midnight ground, periwinkle type, cobalt bands, lemon and pink exhibit artwork. Archivo Black headlines,
+    Manrope reading text, hand-built vector characters, and tactile outlined controls.
+    STORY: Meet the maker, recognize a real problem, try a project, inspect its source.
+    FIRST VIEWPORT: Compact masthead; oversized left-aligned thesis and a right-hand idea machine;
+    the project collection begins immediately below, with its primary browse action in the hero.
+    FORM: A playful exhibition catalog, selected from the user's science-fair brief and confirmed
+    balance of product instincts and weekend energy. Project art is illustration, not screenshots.
+  -->
+  <a class="skip-link" href="#projects">Skip to projects</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Fatma's Lab home">
+      <svg class="brand-spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M17 1h6l1 11 8-7 4 5-9 7 12 1v6l-12 1 9 7-4 5-8-8-1 11h-6l-1-11-8 8-4-5 9-7-12-1v-6l12-1-9-7 4-5 8 7z" fill="currentColor"/></svg>
+      <span>fatma's lab<span class="wordmark-dot">.</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">The experiments</a>
+      <a href="#method">The method</a>
+      <a class="home-link" href="https://fatmaali.dev">My main site <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Small ideas.<br>Big side-quest<br>energy.</h1>
+        <p>Hi, I'm Fatma. I turn <span class="thought">“wait, what if…”</span> into things you can actually use. Part product thinking, part creative coding, occasionally a very opinionated duck.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore the experiments <span aria-hidden="true">↓</span></a>
+          <span class="hero-aside">Made with curiosity.<br>And probably too many tabs.</span>
+        </div>
       </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="weekend-stamp"><span>Weekend</span><strong>side quest</strong><span>department</span></div>
+        <svg class="idea-machine" viewBox="0 0 520 440">
+          <path d="M74 354c-19-95 8-236 119-271 114-35 238 23 253 143 10 80-54 129-158 136Z" fill="#282c47"/>
+          <g transform="rotate(-9 210 174)">
+            <rect x="57" y="66" width="284" height="216" rx="12" fill="#ffb6cf" stroke="#252525" stroke-width="3"/>
+            <path d="M57 101h284" fill="none" stroke="#252525" stroke-width="3"/>
+            <circle cx="75" cy="83" r="4" fill="#252525"/><circle cx="89" cy="83" r="4" fill="#252525"/><circle cx="103" cy="83" r="4" fill="#252525"/>
+            <text x="79" y="144" font-family="Manrope, sans-serif" font-size="15" font-weight="700" fill="#252525">a perfectly reasonable question:</text>
+            <text x="79" y="199" font-family="Archivo Black, sans-serif" font-size="43" fill="#252525">what if?</text>
+            <path d="M82 220h142m-142 15h106" stroke="#252525" stroke-width="3" stroke-linecap="round"/>
+            <path d="m275 217 10 28 5-12 13-2Z" fill="#fff" stroke="#252525" stroke-width="2"/>
+          </g>
+          <g transform="rotate(7 343 256)">
+            <rect x="225" y="163" width="250" height="191" rx="12" fill="#ffe477" stroke="#252525" stroke-width="3"/>
+            <path d="M225 197h250" stroke="#252525" stroke-width="3"/>
+            <text x="245" y="186" font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#252525">idea.exe is running</text>
+            <path d="M286 296c-24-9-24-35-13-44 14-13 28-4 34 6-6-12-7-37 14-42 32-9 53 23 44 43 10 5 26 5 39-2 2 34-27 58-63 58-24 0-43-6-55-19Z" fill="#fffdf6" stroke="#252525" stroke-width="3" stroke-linejoin="round"/>
+            <path d="m360 239 25 10-24 7" fill="#ff925d" stroke="#252525" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="346" cy="236" r="4" fill="#252525"/>
+            <path d="M301 281q19 17 36-2" stroke="#252525" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </g>
+          <path d="m121 327 17-30 7 22 25-1-28 29-1-22Z" fill="#aebaff"/>
+          <path d="m421 94 5 18 18 5-18 5-5 18-5-18-18-5 18-5Z" fill="#aebaff"/>
+          <path d="M174 376q59 29 127 8m-12-9 14 9-13 10" fill="none" stroke="#cbd0ed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="86" y="413" font-family="Manrope, sans-serif" font-size="14" fill="#cbd0ed">less “someday”, more “let's try it.”</text>
+        </svg>
+      </div>
+    </section>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <div class="lab-ribbon" aria-label="Lab philosophy">
+      <div class="wrap ribbon-inner"><span>Real problems.</span><span class="ribbon-star" aria-hidden="true">✳</span><span>Playful solutions.</span><span class="ribbon-star" aria-hidden="true">✳</span><span>Very real side quests.</span><span class="ribbon-star" aria-hidden="true">✳</span><span class="ribbon-bonus">Ship. Learn. Get distracted. Repeat.</span></div>
+    </div>
+
+    <section class="collection wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><h2 id="projects-title">The “I made a thing” collection<span class="heading-dot">.</span></h2><p>A few rabbit holes. A lot of learning. All out in the open.</p></div>
+        <button class="surprise-button" type="button" id="surprise" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="8" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="8" cy="16" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg>Pick a side quest</button>
+      </div>
+      <div class="collection-controls" id="collection-controls" hidden>
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button type="button" data-filter="all" aria-pressed="true">All experiments <span data-total><!-- count:start -->14<!-- count:end --></span></button>
+          <button type="button" data-filter="everyday" aria-pressed="false">Everyday life</button>
+          <button type="button" data-filter="developer" aria-pressed="false">Developer brain</button>
+          <button type="button" data-filter="learning" aria-pressed="false">Learning things</button>
+          <button type="button" data-filter="play" aria-pressed="false">Just because</button>
+        </div>
+        <label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8"/></svg><span class="sr-only">Search projects</span><input id="project-search" type="search" placeholder="Find a rabbit hole…" autocomplete="off"></label>
+      </div>
+      <p id="results-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div class="project-grid" id="project-grid">
+        <!-- projects:start -->
+        <article class="project" id="project-frank" data-category="developer" data-search="frank frank a rubber duck that reviews your ai agent&#39;s plans. he&#39;s frank. he&#39;s a duck. he will not tell you every idea is brilliant. what if &quot;looks good to me&quot; wasn&#39;t the entire review? ai sidekick developer brain">
+          <div class="project-art" style="--art-bg: #ffe477" aria-hidden="true">
+            <span class="project-category">Developer brain</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#frank"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/frank/">Frank</a></h3><span class="project-type">AI sidekick</span></div>
+            <p class="project-description">A rubber duck that reviews your AI agent&#39;s plans. He&#39;s frank. He&#39;s a duck. He will not tell you every idea is brilliant.</p>
+            <p class="project-question"><strong>The what-if:</strong> What if &quot;looks good to me&quot; wasn&#39;t the entire review?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/frank/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Frank</span></a>
+              <a class="project-source" href="https://github.com/fatmali/frank">View source<span class="sr-only"> for Frank</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-jamboscript-docs" data-category="learning" data-search="jamboscript jamboscript-docs learn to code in swahili, one story-driven adventure at a time. because your first programming language can feel like home. why should learning to code start with learning english? language + learning learning things">
+          <div class="project-art" style="--art-bg: #ffb6cf" aria-hidden="true">
+            <span class="project-category">Learning things</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#jambo"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://jamboscript.org/">JamboScript</a></h3><span class="project-type">Language + learning</span></div>
+            <p class="project-description">Learn to code in Swahili, one story-driven adventure at a time. Because your first programming language can feel like home.</p>
+            <p class="project-question"><strong>The what-if:</strong> Why should learning to code start with learning English?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://jamboscript.org/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: JamboScript</span></a>
+              <a class="project-source" href="https://github.com/fatmali/jamboscript-docs">View source<span class="sr-only"> for JamboScript</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-still" data-category="everyday" data-search="still still a sensory space to find your footing through touch, sound, and motion. less &quot;here are 10 tips&quot;. more one thing to hold onto. can an interface ask less of an overwhelmed mind? sensory experience everyday life">
+          <div class="project-art" style="--art-bg: #d5e4db" aria-hidden="true">
+            <span class="project-category">Everyday life</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#still"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/still/">Still</a></h3><span class="project-type">Sensory experience</span></div>
+            <p class="project-description">A sensory space to find your footing through touch, sound, and motion. Less &quot;here are 10 tips&quot;. More one thing to hold onto.</p>
+            <p class="project-question"><strong>The what-if:</strong> Can an interface ask less of an overwhelmed mind?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/still/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Still</span></a>
+              <a class="project-source" href="https://github.com/fatmali/still">View source<span class="sr-only"> for Still</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-herd" data-category="developer" data-search="herd herd a browser extension that groups tabs by what you&#39;re actually doing. for when your browser has become a cry for help. what if your tabs remembered why you opened them? browser extension developer brain">
+          <div class="project-art" style="--art-bg: #e0ddfa" aria-hidden="true">
+            <span class="project-category">Developer brain</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#herd"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://github.com/fatmali/herd">herd</a></h3><span class="project-type">Browser extension</span></div>
+            <p class="project-description">A browser extension that groups tabs by what you&#39;re actually doing. For when your browser has become a cry for help.</p>
+            <p class="project-question"><strong>The what-if:</strong> What if your tabs remembered why you opened them?</p>
+            <div class="project-links">
+              <span class="project-warning">Site temporarily unavailable</span>
+              <a class="project-source" href="https://github.com/fatmali/herd">View source<span class="sr-only"> for herd</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-what-to-eat" data-category="everyday" data-search="what to eat what-to-eat keep track of your fridge, leftovers, and shopping list. a small intervention for the spinach you bought with such good intentions. could dinner start with what we already have? kitchen companion everyday life">
+          <div class="project-art" style="--art-bg: #e2ecb5" aria-hidden="true">
+            <span class="project-category">Everyday life</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#food"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/what-to-eat/">What To Eat</a></h3><span class="project-type">Kitchen companion</span></div>
+            <p class="project-description">Keep track of your fridge, leftovers, and shopping list. A small intervention for the spinach you bought with such good intentions.</p>
+            <p class="project-question"><strong>The what-if:</strong> Could dinner start with what we already have?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/what-to-eat/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: What To Eat</span></a>
+              <a class="project-source" href="https://github.com/fatmali/what-to-eat">View source<span class="sr-only"> for What To Eat</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-handbook" data-category="learning" data-search="handbook handbook turn course material into source-linked chapters, diagrams, practice, and a private notebook. give the learning a little room to stick. what if course notes were a place to think, not just scroll? learning companion learning things">
+          <div class="project-art" style="--art-bg: #bcd9f4" aria-hidden="true">
+            <span class="project-category">Learning things</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#book"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/handbook/">Handbook</a></h3><span class="project-type">Learning companion</span></div>
+            <p class="project-description">Turn course material into source-linked chapters, diagrams, practice, and a private notebook. Give the learning a little room to stick.</p>
+            <p class="project-question"><strong>The what-if:</strong> What if course notes were a place to think, not just scroll?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/handbook/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Handbook</span></a>
+              <a class="project-source" href="https://github.com/fatmali/handbook">View source<span class="sr-only"> for Handbook</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-wormhole" data-category="developer" data-search="wormhole wormhole shared memory for your ai coding agents. switch tools without explaining your entire life story to the next one. can the agents please compare notes? mcp tool developer brain">
+          <div class="project-art" style="--art-bg: #d9d3f2" aria-hidden="true">
+            <span class="project-category">Developer brain</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#wormhole"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/wormhole/">Wormhole</a></h3><span class="project-type">MCP tool</span></div>
+            <p class="project-description">Shared memory for your AI coding agents. Switch tools without explaining your entire life story to the next one.</p>
+            <p class="project-question"><strong>The what-if:</strong> Can the agents please compare notes?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/wormhole/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Wormhole</span></a>
+              <a class="project-source" href="https://github.com/fatmali/wormhole">View source<span class="sr-only"> for Wormhole</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-guide" data-category="everyday" data-search="the london journal guide an offline-first travel journal for london, york, and edinburgh. thoughtful routes, little discoveries, and permission to slow down. what if a travel app felt like a friend who knows the city? travel companion everyday life">
+          <div class="project-art" style="--art-bg: #ffcfb5" aria-hidden="true">
+            <span class="project-category">Everyday life</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#guide"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/guide/">The London Journal</a></h3><span class="project-type">Travel companion</span></div>
+            <p class="project-description">An offline-first travel journal for London, York, and Edinburgh. Thoughtful routes, little discoveries, and permission to slow down.</p>
+            <p class="project-question"><strong>The what-if:</strong> What if a travel app felt like a friend who knows the city?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/guide/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: The London Journal</span></a>
+              <a class="project-source" href="https://github.com/fatmali/guide">View source<span class="sr-only"> for The London Journal</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-receipts" data-category="everyday" data-search="receipts receipts a personal finance experiment for budgets, transactions, and a clearer view of where the money went. yes, it brings receipts. could checking the budget feel a little less like homework? money experiment everyday life">
+          <div class="project-art" style="--art-bg: #f4edb2" aria-hidden="true">
+            <span class="project-category">Everyday life</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#receipt"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/receipts/">Receipts</a></h3><span class="project-type">Money experiment</span></div>
+            <p class="project-description">A personal finance experiment for budgets, transactions, and a clearer view of where the money went. Yes, it brings receipts.</p>
+            <p class="project-question"><strong>The what-if:</strong> Could checking the budget feel a little less like homework?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/receipts/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Receipts</span></a>
+              <a class="project-source" href="https://github.com/fatmali/receipts">View source<span class="sr-only"> for Receipts</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-task-manager" data-category="play" data-search="task manager, rethought task-manager a clickable redesign of windows task manager, exploring safer actions and clearer information. end task, not your confidence. how do you make a powerful tool less intimidating? hci prototype just because">
+          <div class="project-art" style="--art-bg: #c5dcf2" aria-hidden="true">
+            <span class="project-category">Just because</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#tasks"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/task-manager/">Task Manager, rethought</a></h3><span class="project-type">HCI prototype</span></div>
+            <p class="project-description">A clickable redesign of Windows Task Manager, exploring safer actions and clearer information. End task, not your confidence.</p>
+            <p class="project-question"><strong>The what-if:</strong> How do you make a powerful tool less intimidating?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/task-manager/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Task Manager, rethought</span></a>
+              <a class="project-source" href="https://github.com/fatmali/task-manager">View source<span class="sr-only"> for Task Manager, rethought</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-lift" data-category="everyday" data-search="lift lift an offline-first strength training system built around consistency, progressive overload, and recovery. not the number on the scale. what if a fitness app measured showing up, not shrinking? training companion everyday life">
+          <div class="project-art" style="--art-bg: #f9bec5" aria-hidden="true">
+            <span class="project-category">Everyday life</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#lift"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://github.com/fatmali/lift">Lift</a></h3><span class="project-type">Training companion</span></div>
+            <p class="project-description">An offline-first strength training system built around consistency, progressive overload, and recovery. Not the number on the scale.</p>
+            <p class="project-question"><strong>The what-if:</strong> What if a fitness app measured showing up, not shrinking?</p>
+            <div class="project-links">
+              <span class="project-warning">Site link under repair</span>
+              <a class="project-source" href="https://github.com/fatmali/lift">View source<span class="sr-only"> for Lift</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-react-formik-wizard" data-category="developer" data-search="react formik wizard react-formik-wizard build multi-step forms with react, formik, and json. some wizardry, significantly fewer repetitive form components. what if the form was data, not another pile of components? react library developer brain">
+          <div class="project-art" style="--art-bg: #e7daf4" aria-hidden="true">
+            <span class="project-category">Developer brain</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#wizard"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/react-formik-wizard/">React Formik Wizard</a></h3><span class="project-type">React library</span></div>
+            <p class="project-description">Build multi-step forms with React, Formik, and JSON. Some wizardry, significantly fewer repetitive form components.</p>
+            <p class="project-question"><strong>The what-if:</strong> What if the form was data, not another pile of components?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/react-formik-wizard/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: React Formik Wizard</span></a>
+              <a class="project-source" href="https://github.com/fatmali/react-formik-wizard">View source<span class="sr-only"> for React Formik Wizard</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-utility-botcam" data-category="play" data-search="utility bot camera utility-botcam a tiny camera interface for capturing report images for a utility bot. one specific job. no need to make a whole production of it. how small can a useful tool be? camera utility just because">
+          <div class="project-art" style="--art-bg: #cbe5e3" aria-hidden="true">
+            <span class="project-category">Just because</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#camera"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://lab.fatmaali.dev/utility-botcam/">Utility Bot Camera</a></h3><span class="project-type">Camera utility</span></div>
+            <p class="project-description">A tiny camera interface for capturing report images for a utility bot. One specific job. No need to make a whole production of it.</p>
+            <p class="project-question"><strong>The what-if:</strong> How small can a useful tool be?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://lab.fatmaali.dev/utility-botcam/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Utility Bot Camera</span></a>
+              <a class="project-source" href="https://github.com/fatmali/utility-botcam">View source<span class="sr-only"> for Utility Bot Camera</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="project-fatmaali.dev" data-category="play" data-search="the main character fatmaali.dev my personal website and blog. for the work, the words, and the slightly more composed version of the person behind this lab. and who&#39;s responsible for all these tabs, anyway? personal site just because">
+          <div class="project-art" style="--art-bg: #e6e6fb" aria-hidden="true">
+            <span class="project-category">Just because</span>
+            <svg viewBox="0 0 360 230" focusable="false"><use href="/assets/project-art.svg#home"></use></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row"><h3><a class="project-title-link" href="https://fatmaali.dev/">The main character</a></h3><span class="project-type">Personal site</span></div>
+            <p class="project-description">My personal website and blog. For the work, the words, and the slightly more composed version of the person behind this lab.</p>
+            <p class="project-question"><strong>The what-if:</strong> And who&#39;s responsible for all these tabs, anyway?</p>
+            <div class="project-links">
+              <a class="project-visit" href="https://fatmaali.dev/">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: The main character</span></a>
+              <a class="project-source" href="https://github.com/fatmali/fatmaali.dev">View source<span class="sr-only"> for The main character</span></a>
+            </div>
+          </div>
+        </article>
+        <!-- projects:end -->
+      </div>
+      <div class="empty-state" id="empty-state" hidden><h3>No experiments in this corner. Yet.</h3><p>Try a different search or bring all the projects back.</p><button class="button" id="clear-filters" type="button">Show all projects</button></div>
+      <p class="collection-footnote">These are experiments, not enterprise SLAs. Explore freely; expect the occasional plot twist.<br><a href="https://github.com/fatmali?tab=repositories">More code, fewer curated sentences on GitHub <span aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section class="method wrap" id="method" aria-labelledby="method-title">
+      <div class="method-intro"><span class="method-doodle" aria-hidden="true">↳</span><h2 id="method-title">There's a method<br>to the “what if”.</h2><p>The ideas can be silly.<br>The care that goes into them isn't.</p></div>
+      <div class="method-copy">
+        <p>Usually, something small bugs me. Too many tabs. Food forgotten in the fridge. A tool that asks too much of someone who's already overwhelmed.</p>
+        <p>So I follow the thread: <strong>Who is this for? What would actually help? What's the smallest thing worth building?</strong> Then I make it, use it, and find out where I was wrong.</p>
+        <p>AI helps me move from “hmm” to “here, try this.” The curiosity, product decisions, and wildly specific problems? Those are mine.</p>
+        <span class="method-note">Vibecoded. Not vibe-decided.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-top"><div><h2>Stay curious.<br>Make the weird thing.</h2><p>Your next rabbit hole might be a really good idea.</p></div><a class="footer-sticker" href="https://fatmaali.dev"><span>Meet the human</span><strong>behind the tabs</strong><span aria-hidden="true">↗</span></a></div>
+    <div class="wrap footer-bottom"><a class="footer-name" href="/">Fatma's Lab</a><p>A little corner of the internet by Fatma Ali.</p><a href="https://github.com/fatmali">GitHub <span aria-hidden="true">↗</span></a><a href="https://fatmaali.dev">fatmaali.dev <span aria-hidden="true">↗</span></a><a href="#hero-title">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>

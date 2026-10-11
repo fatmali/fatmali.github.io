@@ -1,0 +1,47 @@
+name: Refresh project catalog
+
+on:
+  schedule:
+    - cron: "17 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-project-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'fatmali/fatmali.github.io'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Discover public Pages projects
+        run: node scripts/sync-projects.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - run: node --test
+      - name: Propose the refreshed catalog
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/refresh-project-catalog
+          delete-branch: true
+          add-paths: |
+            data/projects.json
+            index.html
+          commit-message: Refresh public project catalog
+          title: Refresh public project catalog
+          body: |
+            Updates the homepage to match public repositories with GitHub Pages enabled.
+            Existing editorial copy and site-link exceptions are preserved.
+
+            The catalog tests passed in the refresh workflow before this PR was created.
+            Review and merge to publish through the normal GitHub Pages build.
