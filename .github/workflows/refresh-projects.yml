@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write
-  pages: write
+  pull-requests: write
 
 concurrency:
   group: refresh-project-catalog
@@ -29,17 +29,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - run: node --test
-      - name: Save the refreshed catalog
-        run: |
-          if ! git diff --quiet -- data/projects.json index.html; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/projects.json index.html
-            git commit -m "Refresh public project catalog"
-            git push origin HEAD:master
-          fi
-      # A GITHUB_TOKEN commit does not trigger the legacy Pages build automatically.
-      - name: Request a GitHub Pages rebuild
-        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Propose the refreshed catalog
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/refresh-project-catalog
+          delete-branch: true
+          add-paths: |
+            data/projects.json
+            index.html
+          commit-message: Refresh public project catalog
+          title: Refresh public project catalog
+          body: |
+            Updates the homepage to match public repositories with GitHub Pages enabled.
+            Existing editorial copy and site-link exceptions are preserved.
+
+            The catalog tests passed in the refresh workflow before this PR was created.
+            Review and merge to publish through the normal GitHub Pages build.

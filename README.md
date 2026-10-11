@@ -53,10 +53,12 @@ which redirects to a custom domain when configured. Add their more personal
 copy and artwork to the JSON when ready.
 
 The **Refresh project catalog** workflow runs weekly on Monday at 07:17 UTC,
-or manually from Actions. It saves changes on `master` and explicitly requests
-a legacy Pages rebuild, since a commit made with `GITHUB_TOKEN` does not start
-that build automatically. Repository rules must allow the workflow to push;
-otherwise run the sync locally and submit the changes through a pull request.
+or manually from Actions. It proposes changes through a pull request on
+`automation/refresh-project-catalog`, respecting the review requirement on
+`master`. Review and merge that PR to publish through the normal Pages build.
+GitHub Actions must be allowed to create pull requests in the repository's
+Actions settings. The refresh runs the tests before proposing its changes;
+PRs created with `GITHUB_TOKEN` do not automatically trigger another CI run.
 GitHub may disable scheduled workflows in inactive public repositories after
 60 days; re-enable the workflow in Actions if necessary.
 
