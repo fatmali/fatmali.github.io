@@ -75,9 +75,7 @@ h1 { margin-bottom: 24px; font: 400 clamp(50px, 5.8vw, 72px)/1.04 var(--display)
 .weekend-stamp strong { font-size: 17px; font-weight: 800; }
 .collection { padding-block: 40px 0; }
 .section-heading { display: flex; justify-content: space-between; align-items: center; gap: 28px; margin-bottom: 22px; }
-.section-heading h2 { font-size: clamp(23px, 2.6vw, 34px); font-weight: 800; line-height: 1.25; letter-spacing: -.04em; margin-bottom: 9px; }
-.heading-dot { color: var(--blue); }
-.section-heading p { font-size: 13px; color: var(--muted); margin-bottom: 0; }
+.section-heading h2 { font-size: clamp(23px, 2.6vw, 34px); font-weight: 800; line-height: 1.25; letter-spacing: -.04em; margin-bottom: 0; }
 .surprise-button { flex-shrink: 0; display: flex; align-items: center; gap: 9px; min-height: 44px; padding: 8px 13px; border: 1px solid var(--art-ink); border-radius: 6px; color: var(--art-ink); background: var(--yellow); font-size: 12px; font-weight: 800; }
 .surprise-button svg { width: 18px; height: 18px; }
 .surprise-button:hover { box-shadow: 2px 3px 0 var(--blue); }
@@ -177,7 +175,6 @@ h1 { margin-bottom: 24px; font: 400 clamp(50px, 5.8vw, 72px)/1.04 var(--display)
   .collection { padding-top: 40px; }
   .section-heading { align-items: flex-start; flex-wrap: wrap; gap: 18px; margin-bottom: 20px; }
   .section-heading h2 { font-size: 28px; max-width: 450px; }
-  .section-heading p { font-size: 12px; }
   .surprise-button { font-size: 11px; }
   .collection-controls { gap: 10px; margin-bottom: 24px; padding-block: 12px; }
   .filters { gap: 2px; }
