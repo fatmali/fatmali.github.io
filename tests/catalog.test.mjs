@@ -1,17 +1,40 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { root, artNames, escapeHtml, validateProjects, renderProjects, renderCatalog } from "../scripts/catalog.mjs";
+import { root, artNames, escapeHtml, validateProjects, renderProjects, renderCatalog, renderHomepage, versionAssetUrls } from "../scripts/catalog.mjs";
 import { fetchPagesRepositories, mergeProjects } from "../scripts/sync-projects.mjs";
 
 const projects = JSON.parse(await readFile(new URL("data/projects.json", root), "utf8"));
 const html = await readFile(new URL("index.html", root), "utf8");
 const example = projects[0];
 
-test("the committed homepage contains exactly the complete, up-to-date catalog", () => {
-  assert.equal(renderCatalog(html, projects), html);
+test("the committed homepage contains the up-to-date catalog and asset versions", async () => {
+  assert.equal(await renderHomepage(html, projects), html);
   assert.equal((html.match(/class="project"/g) || []).length, projects.length);
   for (const project of projects) assert.ok(html.includes(`id="project-${project.repo}"`));
+});
+
+test("asset versions are deterministic, change with content, and preserve SVG fragments", () => {
+  const template = '<link href="/assets/lab.css"><script src="/assets/lab.js"></script><use href="/assets/project-art.svg#frank"></use>';
+  const assets = { "assets/lab.css": "first styles", "assets/lab.js": "script", "assets/project-art.svg": "art" };
+  const versioned = versionAssetUrls(template, assets);
+  assert.match(versioned, /href="\/assets\/lab\.css\?v=[a-f0-9]{12}"/);
+  assert.match(versioned, /src="\/assets\/lab\.js\?v=[a-f0-9]{12}"/);
+  assert.match(versioned, /href="\/assets\/project-art\.svg\?v=[a-f0-9]{12}#frank"/);
+  assert.equal(versionAssetUrls(versioned, assets), versioned);
+  const updated = versionAssetUrls(versioned, { ...assets, "assets/lab.css": "changed styles" });
+  assert.notEqual(updated.match(/href="[^"]+\.css[^"]+"/)[0], versioned.match(/href="[^"]+\.css[^"]+"/)[0]);
+  assert.equal(updated.match(/src="[^"]+"/)[0], versioned.match(/src="[^"]+"/)[0]);
+  assert.equal((updated.match(/\?v=/g) || []).length, 3);
+  assert.throws(() => versionAssetUrls("", assets), /missing its assets\/lab.css reference/);
+});
+
+test("the main-site arrow has intrinsic dimensions even without its current CSS", () => {
+  const icon = html.match(/class="home-link"[^>]*>[\s\S]*?(<svg\b[^>]*>)/)?.[1];
+  assert.ok(icon, "The main-site link needs its SVG arrow.");
+  assert.match(icon, /width="16"/);
+  assert.match(icon, /height="16"/);
+  assert.match(icon, /aria-hidden="true"/);
 });
 
 test("every project illustration exists", async () => {

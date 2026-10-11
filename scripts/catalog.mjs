@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 export const categories = {
   everyday: "Everyday life",
@@ -10,6 +11,7 @@ export const categories = {
 
 export const artNames = new Set(["frank", "jambo", "still", "herd", "food", "book", "wormhole", "guide", "receipt", "tasks", "lift", "wizard", "camera", "home", "spark"]);
 export const root = new URL("../", import.meta.url);
+const versionedAssets = ["assets/lab.css", "assets/lab.js", "assets/project-art.svg"];
 
 export function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, character => ({
@@ -77,12 +79,28 @@ export function renderCatalog(html, projects) {
     .replace(count, () => `<!-- count:start -->${projects.length}<!-- count:end -->`);
 }
 
+export function versionAssetUrls(html, assets) {
+  for (const [path, contents] of Object.entries(assets)) {
+    const escapedPath = path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const reference = new RegExp(`(\\b(?:href|src)="/${escapedPath})(?:\\?v=[a-f0-9]+)?(?=["#])`, "g");
+    if (!html.match(reference)) throw new Error(`The homepage is missing its ${path} reference.`);
+    const version = createHash("sha256").update(contents).digest("hex").slice(0, 12);
+    html = html.replace(reference, (_, prefix) => `${prefix}?v=${version}`);
+  }
+  return html;
+}
+
+export async function renderHomepage(html, projects) {
+  const assets = await Promise.all(versionedAssets.map(async path => [path, await readFile(new URL(path, root))]));
+  return versionAssetUrls(renderCatalog(html, projects), Object.fromEntries(assets));
+}
+
 export async function updateHomepage({ check = false } = {}) {
   const projects = JSON.parse(await readFile(new URL("data/projects.json", root), "utf8"));
   const path = new URL("index.html", root);
   const html = await readFile(path, "utf8");
-  const rendered = renderCatalog(html, projects);
-  if (check && html !== rendered) throw new Error("The homepage catalog is stale. Run node scripts/catalog.mjs.");
+  const rendered = await renderHomepage(html, projects);
+  if (check && html !== rendered) throw new Error("The homepage catalog or asset versions are stale. Run node scripts/catalog.mjs.");
   if (!check && html !== rendered) await writeFile(path, rendered);
   console.log(`${projects.length} projects ${check ? "verified" : "rendered"} in index.html.`);
 }

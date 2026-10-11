@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { root, renderCatalog, validateProjects } from "./catalog.mjs";
+import { root, renderHomepage, validateProjects } from "./catalog.mjs";
 
 export async function fetchPagesRepositories(fetcher = fetch, token = process.env.GITHUB_TOKEN) {
   const repositories = [];
@@ -53,7 +53,7 @@ export async function synchronize() {
   const repositories = await fetchPagesRepositories();
   const projects = mergeProjects(repositories, current);
   const homepage = new URL("index.html", root);
-  const html = renderCatalog(await readFile(homepage, "utf8"), projects);
+  const html = await renderHomepage(await readFile(homepage, "utf8"), projects);
   await writeFile(path, `${JSON.stringify(projects, null, 2)}\n`);
   await writeFile(homepage, html);
   console.log(`Synced ${projects.length} public GitHub Pages projects. Editorial copy and explicit site-link exceptions were preserved.`);

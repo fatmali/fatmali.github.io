@@ -37,6 +37,13 @@ node scripts/catalog.mjs
 Do not edit the generated project section or count inside `index.html` by hand.
 The surrounding page is ordinary hand-authored HTML.
 
+Run `node scripts/catalog.mjs` after changing `assets/lab.css`, `assets/lab.js`,
+or `assets/project-art.svg` too. The generator adds content-based versions to
+their URLs so new HTML does not reuse an older cached stylesheet, script, or
+illustration. Both catalog commands refresh these versions, and CI rejects
+stale versions. The main-site arrow also has intrinsic SVG dimensions so it
+cannot expand while styles are loading.
+
 Discover new Pages repositories and remove repositories that no longer have
 public Pages enabled:
 
@@ -79,7 +86,7 @@ node scripts/catalog.mjs --check
 ```
 
 The checks cover catalog completeness, HTML escaping, allowed URLs and artwork,
-API pagination and errors, missing destinations, and deterministic updates.
+API pagination and errors, missing destinations, asset versions, and deterministic updates.
 The **Check the lab** workflow runs them on pull requests and `master`.
 
 ## Hosting
