@@ -136,17 +136,6 @@
     "url": "https://lab.fatmaali.dev/react-formik-wizard/"
   },
   {
-    "repo": "utility-botcam",
-    "title": "Utility Bot Camera",
-    "description": "A tiny camera interface for capturing report images for a utility bot. One specific job. No need to make a whole production of it.",
-    "question": "How small can a useful tool be?",
-    "category": "play",
-    "type": "Camera utility",
-    "art": "camera",
-    "color": "#cbe5e3",
-    "url": "https://lab.fatmaali.dev/utility-botcam/"
-  },
-  {
     "repo": "fatmaali.dev",
     "title": "The main character",
     "description": "My personal website and blog. For the work, the words, and the slightly more composed version of the person behind this lab.",
